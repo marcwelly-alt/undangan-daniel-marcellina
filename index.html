@@ -90,7 +90,6 @@
 <body class="bg-maroon-950 text-neutral-100 font-sans antialiased overflow-x-hidden selection:bg-gold-500 selection:text-maroon-950">
 
   <!-- ================= ELEMEN AUDIO PEMUTAR MP3 ASLI ================= -->
-  <!-- Letakkan file musik dengan nama "asepirawan20-wedding-background-music-5529.mp3" di satu folder yang sama di GitHub -->
   <audio id="wedding-audio" loop preload="auto">
     <source src="asepirawan20-wedding-background-music-5529.mp3" type="audio/mpeg">
   </audio>
@@ -127,11 +126,6 @@
     </div>
   </div>
 
-<!-- TEMPELKAN KODE AUDIO INI TEPAT DI SINI -->
-<audio id="wedding-audio" loop preload="auto">
-  <source src="asepirawan20-wedding-background-music-5529.mp3" type="audio/mpeg">
-</audio>
-
   <!-- ================= FLOATING AUDIO & NAVIGATION ================= -->
   <!-- Audio Toggle Floating Button -->
   <button id="audio-toggle" class="fixed top-5 right-5 z-40 w-11 h-11 rounded-full bg-maroon-900/80 border border-gold-500 text-gold-300 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
@@ -139,7 +133,7 @@
   </button>
 
   <!-- Bottom Floating Navbar -->
-  <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 w-[94%] max-w-md nav-blur border border-gold-500/30 rounded-full px-4 py-2.5 shadow-2xl flex items-center justify-between text-neutral-300 text-xs">
+  <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-md nav-blur border border-gold-500/30 rounded-full px-5 py-2.5 shadow-2xl flex items-center justify-between text-neutral-300 text-xs">
     <a href="#hero" class="flex flex-col items-center hover:text-gold-400 transition-colors">
       <i class="fa-solid fa-house text-sm"></i>
       <span class="text-[9px] mt-0.5">Awal</span>
@@ -156,13 +150,9 @@
       <i class="fa-solid fa-location-dot text-sm"></i>
       <span class="text-[9px] mt-0.5">Lokasi</span>
     </a>
-    <a href="#amplop" class="flex flex-col items-center hover:text-gold-400 transition-colors">
-      <i class="fa-solid fa-gift text-sm"></i>
-      <span class="text-[9px] mt-0.5">Tanda Kasih</span>
-    </a>
-    <a href="#rsvp" class="flex flex-col items-center hover:text-gold-400 transition-colors">
+    <a href="#ucapan" class="flex flex-col items-center hover:text-gold-400 transition-colors">
       <i class="fa-solid fa-comment-dots text-sm"></i>
-      <span class="text-[9px] mt-0.5">RSVP</span>
+      <span class="text-[9px] mt-0.5">Ucapan</span>
     </a>
   </nav>
 
@@ -335,103 +325,32 @@
       </div>
     </section>
 
-    <!-- SECTION AMPLOP DIGITAL / TANDA KASIH -->
-    <section id="amplop" class="py-16 px-6 text-center border-b border-gold-500/20 songket-bg relative">
-      <div class="max-w-md mx-auto relative z-10">
-        <div class="w-12 h-12 mx-auto rounded-full bg-maroon-900 border border-gold-500/40 flex items-center justify-center text-gold-300 mb-3 shadow-md">
-          <i class="fa-solid fa-gift text-xl"></i>
-        </div>
-        <p class="font-cinzel text-xs tracking-[0.25em] text-gold-400 uppercase mb-2">Tanda Kasih</p>
-        <h2 class="font-serif text-3xl font-bold text-white mb-3">Amplop Digital</h2>
-        <p class="text-xs text-neutral-300 font-light leading-relaxed mb-8">
-          Doa restu Anda merupakan hadiah terindah bagi kami. Namun jika Anda berkenan memberikan tanda kasih secara digital, Anda dapat menyalurkannya melalui rekening berikut:
-        </p>
-
-        <!-- Kartu Rekening BCA -->
-        <div class="bg-maroon-950/95 border-2 border-gold-500/50 rounded-2xl p-6 shadow-2xl relative overflow-hidden text-left gold-glow">
-          <div class="flex items-center justify-between mb-5">
-            <span class="font-cinzel text-xs font-bold text-gold-300 tracking-wider">BANK CENTRAL ASIA</span>
-            <span class="text-xs font-black tracking-widest text-white px-3 py-1 rounded bg-blue-900/80 border border-blue-400/40">BCA</span>
-          </div>
-
-          <div class="flex items-center gap-2 mb-4">
-            <div class="w-10 h-7 rounded bg-gradient-to-tr from-amber-400 to-yellow-200 border border-amber-600 shadow-inner flex items-center justify-center">
-              <i class="fa-solid fa-microchip text-maroon-950 text-xs"></i>
-            </div>
-            <i class="fa-solid fa-wifi text-gold-400/60 text-xs"></i>
-          </div>
-
-          <p class="text-[11px] text-neutral-400 font-light mb-1">Nomor Rekening:</p>
-          <div class="flex items-center justify-between gap-2 mb-4">
-            <span id="rekening-bca" class="font-mono text-xl md:text-2xl font-bold tracking-wider text-white">0650095120</span>
-            <button id="btn-copy-rek" onclick="copyRekening()" class="py-2 px-3.5 rounded-lg bg-gold-500 text-maroon-950 font-bold text-xs hover:brightness-110 active:scale-95 transition-all flex items-center gap-1.5 shadow-md">
-              <i id="copy-icon" class="fa-regular fa-copy"></i>
-              <span id="copy-text">Salin</span>
-            </button>
-          </div>
-
-          <div class="pt-3 border-t border-gold-500/20 flex justify-between items-center text-xs">
-            <div>
-              <p class="text-[10px] text-neutral-400 font-light">Atas Nama:</p>
-              <p class="font-semibold text-white tracking-wide">MARCUS WELLY KRISDIANTO</p>
-            </div>
-            <i class="fa-solid fa-circle-check text-gold-400 text-lg"></i>
-          </div>
-        </div>
-
-        <!-- Toast Notifikasi Salin -->
-        <div id="toast-copy" class="hidden mt-4 inline-flex items-center gap-2 py-2 px-4 rounded-full bg-emerald-900/90 border border-emerald-400/50 text-emerald-200 text-xs shadow-lg transition-all">
-          <i class="fa-solid fa-check-circle"></i> Nomor rekening berhasil disalin!
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION RSVP DENGAN GOOGLE SHEETS & DAFTAR UCAPAN -->
-    <section id="rsvp" class="py-16 px-6">
+    <!-- SECTION DOA RESTU & UCAPAN (TANPA FORM RSVP) -->
+    <section id="ucapan" class="py-16 px-6">
       <div class="text-center mb-8">
-        <p class="font-cinzel text-xs tracking-[0.25em] text-gold-400 uppercase mb-2">Konfirmasi & Harapan</p>
-        <h2 class="font-serif text-3xl font-bold text-white mb-2">RSVP &amp; Doa Restu</h2>
-        <p class="text-xs text-neutral-300 font-light max-w-sm mx-auto">Konfirmasi Anda sangat membantu kami dalam mempersiapkan jamuan dengan sebaik-baiknya.</p>
+        <p class="font-cinzel text-xs tracking-[0.25em] text-gold-400 uppercase mb-2">Harapan &amp; Restu</p>
+        <h2 class="font-serif text-3xl font-bold text-white mb-2">Doa Restu &amp; Ucapan</h2>
+        <p class="text-xs text-neutral-300 font-light max-w-sm mx-auto">Untaian doa dan ucapan selamat dari Bapak/Ibu/Saudara/i merupakan kebahagiaan tersendiri bagi kami.</p>
       </div>
 
-      <!-- Form RSVP terhubung ke Google Sheets -->
-      <form id="rsvp-form" onsubmit="submitRSVP(event)" class="bg-maroon-950 border border-gold-500/40 rounded-2xl p-6 max-w-md mx-auto shadow-2xl space-y-4">
+      <!-- Form Ucapan terhubung ke Google Sheets -->
+      <form id="wish-form" onsubmit="submitWish(event)" class="bg-maroon-950 border border-gold-500/40 rounded-2xl p-6 max-w-md mx-auto shadow-2xl space-y-4">
         <div>
           <label class="block text-xs font-semibold text-gold-300 mb-1">Nama Lengkap</label>
-          <input type="text" id="rsvp-nama" required placeholder="Contoh: Bpk. Bambang & Keluarga" class="w-full px-4 py-2.5 rounded-xl bg-maroon-900/80 border border-gold-500/30 text-white text-xs focus:outline-none focus:border-gold-400 transition-colors">
-        </div>
-
-        <div>
-          <label class="block text-xs font-semibold text-gold-300 mb-1">Konfirmasi Kehadiran</label>
-          <select id="rsvp-kehadiran" class="w-full px-4 py-2.5 rounded-xl bg-maroon-900/80 border border-gold-500/30 text-white text-xs focus:outline-none focus:border-gold-400 transition-colors">
-            <option value="Hadir">Akan Hadir</option>
-            <option value="Ragu-ragu">Masih Ragu</option>
-            <option value="Tidak Hadir">Mohon Maaf, Berhalangan Hadir</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block text-xs font-semibold text-gold-300 mb-1">Jumlah Tamu</label>
-          <select id="rsvp-jumlah" class="w-full px-4 py-2.5 rounded-xl bg-maroon-900/80 border border-gold-500/30 text-white text-xs focus:outline-none focus:border-gold-400 transition-colors">
-            <option value="1">1 Orang</option>
-            <option value="2">2 Orang</option>
-            <option value="3">3 Orang</option>
-            <option value="4">4 Orang</option>
-            <option value="5">5 Orang (Keluarga Besar)</option>
-          </select>
+          <input type="text" id="wish-nama" required placeholder="Contoh: Bpk. Bambang & Keluarga" class="w-full px-4 py-2.5 rounded-xl bg-maroon-900/80 border border-gold-500/30 text-white text-xs focus:outline-none focus:border-gold-400 transition-colors">
         </div>
 
         <div>
           <label class="block text-xs font-semibold text-gold-300 mb-1">Doa Restu &amp; Pesan</label>
-          <textarea id="rsvp-ucapan" rows="3" required placeholder="Tuliskan pesan doa dan ucapan selamat..." class="w-full px-4 py-2.5 rounded-xl bg-maroon-900/80 border border-gold-500/30 text-white text-xs focus:outline-none focus:border-gold-400 transition-colors resize-none"></textarea>
+          <textarea id="wish-ucapan" rows="3" required placeholder="Tuliskan pesan doa dan ucapan selamat..." class="w-full px-4 py-2.5 rounded-xl bg-maroon-900/80 border border-gold-500/30 text-white text-xs focus:outline-none focus:border-gold-400 transition-colors resize-none"></textarea>
         </div>
 
-        <button type="submit" id="btn-submit-rsvp" class="w-full py-3 rounded-xl songket-border text-maroon-950 font-cinzel font-bold text-xs tracking-wider shadow-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
-          <i class="fa-solid fa-paper-plane"></i> Kirim Konfirmasi &amp; Ucapan
+        <button type="submit" id="btn-submit-wish" class="w-full py-3 rounded-xl songket-border text-maroon-950 font-cinzel font-bold text-xs tracking-wider shadow-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Kirim Ucapan &amp; Doa
         </button>
 
         <!-- Message feedback banner -->
-        <p id="rsvp-alert" class="hidden text-xs text-center font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 p-2.5 rounded-lg"></p>
+        <p id="wish-alert" class="hidden text-xs text-center font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 p-2.5 rounded-lg"></p>
       </form>
 
       <!-- Feed Ucapan Dinamis -->
@@ -473,44 +392,13 @@
       if (toParam) {
         const decoded = decodeURIComponent(toParam.replace(/\+/g, ' '));
         document.getElementById('guest-name').innerText = decoded;
-        document.getElementById('rsvp-nama').value = decoded;
+        document.getElementById('wish-nama').value = decoded;
       }
       renderWishes();
       initCountdown();
     });
 
-    // 2. Salin Rekening BCA ke Clipboard
-    function copyRekening() {
-      const rekText = "0650095120";
-      const tempInput = document.createElement("input");
-      tempInput.value = rekText;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      tempInput.setSelectionRange(0, 99999);
-      
-      try {
-        document.execCommand('copy');
-      } catch (err) {
-        console.error('Gagal menyalin rekening:', err);
-      }
-      document.body.removeChild(tempInput);
-
-      const copyBtn = document.getElementById('copy-text');
-      const copyIcon = document.getElementById('copy-icon');
-      const toast = document.getElementById('toast-copy');
-
-      copyBtn.innerText = "Tersalin!";
-      copyIcon.className = "fa-solid fa-check";
-      toast.classList.remove('hidden');
-
-      setTimeout(() => {
-        copyBtn.innerText = "Salin";
-        copyIcon.className = "fa-regular fa-copy";
-        toast.classList.add('hidden');
-      }, 3000);
-    }
-
-    // 3. Audio Player Logic (Memutar musik-wedding.mp3 asli)
+    // 2. Audio Player Logic
     const audioElement = document.getElementById('wedding-audio');
     const audioIcon = document.getElementById('audio-icon');
     let isPlaying = false;
@@ -548,7 +436,7 @@
       }, 1000);
     });
 
-    // 4. Countdown Timer ke Sabtu, 5 Desember 2026 Pukul 16:00:00 WIB (UTC+7)
+    // 3. Countdown Timer ke Sabtu, 5 Desember 2026 Pukul 16:00:00 WIB (UTC+7)
     function initCountdown() {
       const targetDate = new Date('2026-12-05T16:00:00+07:00').getTime();
 
@@ -579,19 +467,15 @@
       setInterval(updateTimer, 1000);
     }
 
-    // 5. Submit RSVP ke Google Sheets & Local Storage
+    // 4. Submit Ucapan ke Google Sheets & Local Storage
     const DEFAULT_WISHES = [
       {
         nama: "Keluarga Rita",
-        kehadiran: "Hadir (2 Orang)",
-        jumlah: "2",
         ucapan: "Selamat atas syukuran ngunduh mantu Daniel & Marcellina! Kiranya Tuhan selalu memberkati bahtera rumah tangga kalian berdua.",
         time: "Baru saja"
       },
       {
         nama: "Om Benny & Bulik Wanti",
-        kehadiran: "Hadir (2 Orang)",
-        jumlah: "2",
         ucapan: "Selamat untuk Daniel dan Marcel, semoga bahagia, rukun selalu, dan acara di Restoran Ponyo Bekasi berjalan lancar dan penuh sukacita.",
         time: "1 jam yang lalu"
       }
@@ -608,22 +492,14 @@
       listContainer.innerHTML = '';
 
       wishes.forEach(item => {
-        const isHadir = item.kehadiran && item.kehadiran.includes('Hadir') && !item.kehadiran.includes('Tidak');
-        const isRagu = item.kehadiran && (item.kehadiran.includes('Ragu') || item.kehadiran.includes('Masih'));
-        
-        const badgeColor = isHadir 
-          ? 'bg-emerald-900/60 text-emerald-300 border-emerald-500/40' 
-          : (isRagu ? 'bg-amber-900/60 text-amber-300 border-amber-500/40' : 'bg-rose-900/60 text-rose-300 border-rose-500/40');
-
         const card = document.createElement('div');
         card.className = 'p-3.5 rounded-xl bg-maroon-950/90 border border-gold-500/20 text-left shadow-sm';
         card.innerHTML = `
           <div class="flex items-center justify-between gap-2 mb-1.5">
             <h4 class="font-bold text-xs text-gold-300 truncate">${escapeHtml(item.nama || item.name || 'Tamu')}</h4>
-            <span class="text-[10px] px-2 py-0.5 rounded-full border ${badgeColor}">${escapeHtml(item.kehadiran || item.status || 'Hadir')}</span>
+            <span class="text-[9px] text-neutral-500">${escapeHtml(item.time || 'Terkirim')}</span>
           </div>
           <p class="text-xs text-neutral-200 leading-relaxed font-light">${escapeHtml(item.ucapan || item.message || '')}</p>
-          <span class="block text-[9px] text-neutral-500 mt-2">${escapeHtml(item.time || 'Terkonfirmasi')}</span>
         `;
         listContainer.appendChild(card);
       });
@@ -635,26 +511,22 @@
       return div.innerHTML;
     }
 
-    async function submitRSVP(event) {
+    async function submitWish(event) {
       event.preventDefault();
       
-      const nama = document.getElementById('rsvp-nama').value.trim();
-      const kehadiran = document.getElementById('rsvp-kehadiran').value;
-      const jumlah = document.getElementById('rsvp-jumlah').value;
-      const ucapan = document.getElementById('rsvp-ucapan').value.trim();
-      const btnSubmit = document.getElementById('btn-submit-rsvp');
-      const alertBox = document.getElementById('rsvp-alert');
+      const nama = document.getElementById('wish-nama').value.trim();
+      const ucapan = document.getElementById('wish-ucapan').value.trim();
+      const btnSubmit = document.getElementById('btn-submit-wish');
+      const alertBox = document.getElementById('wish-alert');
 
       if (!nama || !ucapan) return;
 
       btnSubmit.disabled = true;
-      btnSubmit.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Mengirim Data...`;
+      btnSubmit.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Mengirim Ucapan...`;
 
       // 1. Simpan ke Tampilan Lokal Instan
       const newWish = {
         nama: nama,
-        kehadiran: `${kehadiran} (${jumlah} Orang)`,
-        jumlah: jumlah,
         ucapan: ucapan,
         time: 'Baru saja'
       };
@@ -663,14 +535,14 @@
       wishes.unshift(newWish);
       localStorage.setItem('wedding_wishes_daniel_marcel', JSON.stringify(wishes));
 
-      // 2. Kirim Data ke Google Sheets
+      // 2. Kirim Data ke Google Sheets (kolom kehadiran & jumlah diisi '-' agar struktur sheet tetap rapi)
       if (GOOGLE_SCRIPT_URL) {
         try {
           await fetch(GOOGLE_SCRIPT_URL, {
             method: "POST",
             mode: "no-cors",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ nama, kehadiran, jumlah, ucapan })
+            body: JSON.stringify({ nama, kehadiran: "-", jumlah: "-", ucapan })
           });
         } catch (err) {
           console.warn("Koneksi cloud sheet error:", err);
@@ -679,10 +551,10 @@
 
       // Feedback Berhasil
       btnSubmit.disabled = false;
-      btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Kirim Konfirmasi &amp; Ucapan`;
-      document.getElementById('rsvp-ucapan').value = '';
+      btnSubmit.innerHTML = `<i class="fa-solid fa-paper-plane"></i> Kirim Ucapan &amp; Doa`;
+      document.getElementById('wish-ucapan').value = '';
 
-      alertBox.innerText = 'Puji Tuhan, konfirmasi kehadiran dan ucapan Anda telah berhasil tersimpan!';
+      alertBox.innerText = 'Puji Tuhan, ucapan dan doa restu Anda telah berhasil tersimpan!';
       alertBox.classList.remove('hidden');
       setTimeout(() => {
         alertBox.classList.add('hidden');
